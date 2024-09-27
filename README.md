@@ -48,72 +48,13 @@ This project uses CMake for building.
 ### How to Run Tests
    You need to install Google Test if it's not already available on your system.
    git clone https://github.com/google/googletest.git googletest
-
+ 
 1. Build test suite 
    make test_robot
 
 2. Run Tests
    ./test_robot
-
-3. Test Covered include:
    
-   InitialState:
-   Verifies that the robot is not placed on the table initially.
-
-   ValidPlaceCommand:
-   Tests placing the robot at a valid position and facing a valid direction (NORTH, SOUTH, EAST, or WEST).
-
-   MoveCommandNorth:
-   Tests moving the robot one unit forward when facing NORTH.
-
-   TurnLeftCommand:
-   Tests turning the robot left (counterclockwise) from its current direction.
-
-   TurnRightCommand:
-   Tests turning the robot right (clockwise) from its current direction.
-
-   ReportCommandOutput:
-   Tests that the REPORT command outputs the correct position and facing direction of the robot.
-
-   CommandsIgnoredBeforePlace:
-   Verifies that all commands (MOVE, LEFT, RIGHT, REPORT) are ignored until a valid PLACE command is issued.
-
-   InvalidPlaceCommandOutOfBounds:
-   Tests that placing the robot out of the table bounds is ignored, and the robot is not placed.
-
-   InvalidPlaceCommandInvalidDirection:
-   Tests that an invalid direction (other than NORTH, SOUTH, EAST, or WEST) for the PLACE command throws an error.
-
-   PreventFallingOffTableNorth:
-   Verifies that the robot cannot move beyond the northern boundary of the table.
-
-   PreventFallingOffTableEast:
-   Verifies that the robot cannot move beyond the eastern boundary of the table.
-
-   PreventFallingOffTableSouth:
-   Verifies that the robot cannot move beyond the southern boundary of the table.
-
-   PreventFallingOffTableWest:
-   Verifies that the robot cannot move beyond the western boundary of the table.
-
-   MultiplePlaceCommands:
-   Tests that the robot can be re-placed at different positions on the table, updating its state accordingly.
-
-   ComplexSequenceOfCommands:
-   Simulates a more complex sequence of commands (PLACE, MOVE, LEFT, MOVE) to verify the robot's state after multiple actions.
-
-   FullRotation:
-   Tests that four consecutive 90-degree rotations return the robot to its original facing direction.
-
-   InvalidPlaceCommandsIgnore:
-   Verifies that invalid PLACE commands (e.g., out of bounds) do not affect the robot's state.
-
-   ReplacedAfterBeingPlaced:
-   Tests that the robot can be re-placed after being placed initially and updates its position and direction accordingly.
-
-   ReportAfterMultipleCommands:
-   Verifies that the REPORT command outputs the correct state after multiple commands have been executed.  
-
 ### Notes
    1. Maintainability:
    By adhering to the Single Responsibility Principle (SRP), each class and module has a clear and focused purpose, making it easier to maintain and update without unintended side effects.
