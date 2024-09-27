@@ -41,8 +41,11 @@ This project uses CMake for building.
    The application will accept commands through standard input. You can use the following commands:
 
    PLACE X,Y,F: Place the robot at position (X, Y) facing F (NORTH, SOUTH, EAST, or WEST).
+
    MOVE: Move the robot one unit forward in the direction it is currently facing.
+   
    LEFT: Rotate the robot 90 degrees to the left.
+   
    RIGHT: Rotate the robot 90 degrees to the right.
 
 ### How to Run Tests
@@ -54,7 +57,7 @@ This project uses CMake for building.
 
 2. Run Tests
    ./test_robot
-   
+
 ### Notes
    1. Maintainability:
    By adhering to the Single Responsibility Principle (SRP), each class and module has a clear and focused purpose, making it easier to maintain and update without unintended side effects.
