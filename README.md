@@ -22,8 +22,8 @@ This project uses CMake for building.
 1. Clone the repository or download the source code.
 
    ```sh
-   git clone https://github.com/maddernd/TOYROBOT.git
-   cd TOYROBOT
+   git clone https://github.com/maddernd/Toy-Robot-Simulator.git
+   cd Toy-Robot-Simulator
 
 2. Create a build directory and navigate into it:
    mkdir build
@@ -47,6 +47,7 @@ This project uses CMake for building.
 
 ### How to Run Tests
    You need to install Google Test if it's not already available on your system.
+   git clone https://github.com/google/googletest.git googletest
 
 1. Build test suite 
    make test_robot
